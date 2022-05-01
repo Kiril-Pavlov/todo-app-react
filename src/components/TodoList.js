@@ -4,12 +4,12 @@ import React from "react";
 import Todo from "./Todo";
 
 
-function TodoList({todos, setTodos}){
+function TodoList({todos, setTodos, filteredTodos}){
 
 
     return <div>
         <div className="todos-list">
-            {todos.map(todo =>(
+            {filteredTodos.map(todo =>(
                 <Todo 
                     description={todo.description}
                     key={todo.id}
