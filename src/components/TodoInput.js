@@ -14,7 +14,7 @@ function TodoInput({todoDescription, setTodoDescription, todos,setTodos, setFilt
         setTodos([
             ...todos,
             {
-                id: counter,
+                id: Math.random()*1000,
                 description: todoDescription,
                 completed: false
             }
