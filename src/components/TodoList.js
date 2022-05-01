@@ -4,7 +4,7 @@ import React from "react";
 import Todo from "./Todo";
 
 
-function TodoList({todos}){
+function TodoList({todos, setTodos}){
 
 
     return <div>
@@ -13,7 +13,9 @@ function TodoList({todos}){
                 <Todo 
                     description={todo.description}
                     key={todo.id}
-
+                    todos={todos}
+                    todo={todo}
+                    setTodos={setTodos}
                 />
             ))}
         </div>
