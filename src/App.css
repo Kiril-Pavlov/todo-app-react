@@ -1,6 +1,6 @@
 :root{
-    --primary:#330033;
-    --secondary: #003300;
+    --primary:white;
+    --secondary: black;
 }
 
 *{
@@ -10,9 +10,14 @@
 
 }
 
+body{
+    background-image: url("deskBackground.jpg");
+    background-size: cover;
+}
+
 .main-container{
-    background-color: white;
-    border: 3px solid var(--primary);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--secondary);
     width: 500px;
     margin: 30px auto;
     min-height: 300px;
@@ -40,6 +45,17 @@
     border-radius: 5px;
 }
 
+.filters-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    color: white;
+    padding: 10px;
+    margin: 5px auto;
+    align-items: stretch;
+    width: 50%;
+}
+
+
 .todos-list{
     border: 1px solid var(--primary);
     width: 100%;
@@ -60,10 +76,22 @@
 
 }
 
+.todo-work{
+    border:3px solid blue;
+}
+
+.todo-personal{
+    border:3px solid green;
+}
+
+.todo-wishlist{
+    border:3px solid yellow;
+}
+
 .todo-item p{
     border-radius: 5px;
     border: none;
-    color: white;
+    color: black;
 }
 
 .todo-item button{

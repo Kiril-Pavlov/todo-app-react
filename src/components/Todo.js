@@ -19,8 +19,10 @@ function Todo({description, todos, setTodos, todo}) {
         }))
     }
 
+    // {`todo-item ${todo.category === "work" ? "todo-work" : ''}`}
+
     return <div>
-            <div className="todo-item">
+            <div className={`todo-item ${todo.category === "work" ? "todo-work" : ''} ${todo.category === "personal" ? "todo-personal" : ''} ${todo.category === "wishlist" ? "todo-wishlist" : ''}`}>
                 <p className={`${todo.completed ? "completed" : ''}`}> {description} </p>
                 <button className="edit-todo-button">Edit</button>
                 <button className="delete-todo-button" onClick={deleteTodo}>Delete</button>

@@ -11,6 +11,8 @@ function App() {
   const [todos,setTodos]= useState([]);
   const [filter,setFilter] = useState("all");
   const [filteredTodos,setFilteredTodos] = useState([])
+  const [todoCategory, setTodoCategory] =useState("");
+
 
   useEffect(function(){
     //console.log("hey al")
@@ -60,6 +62,8 @@ function App() {
           todos={todos} 
           setTodos={setTodos}
           setFilter={setFilter}
+          todoCategory={todoCategory}
+          setTodoCategory={setTodoCategory}
         />
         <TodoList 
           todos={todos}
